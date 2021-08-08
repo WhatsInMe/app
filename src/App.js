@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function App() {
   console.log("test");
-  axios.get("https://api/items")
+  axios.get("https://yukiskitchen.org:5003/items")
   .then(response => {
     console.log(response.data)
   })
