@@ -3,11 +3,14 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
-  console.log("test");
-  axios.get("https://yukiskitchen.org/api/items")
+
+  console.log(process.env.NODE_ENV);
+  console.log(process.env.REACT_APP_API);
+  axios.get(process.env.REACT_APP_API + "/items")
   .then(response => {
     console.log(response.data)
-  })
+  });
+
   return (
     <div className="App">
       <header className="App-header">
@@ -21,7 +24,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+        What's in me?
         </a>
       </header>
     </div>
