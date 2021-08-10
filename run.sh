@@ -1,3 +1,5 @@
+npm run build-local
+docker build -t yw/whatsinme-app-dev -f Dockerfile-dev .
 docker run \
     -d \
     --rm \
